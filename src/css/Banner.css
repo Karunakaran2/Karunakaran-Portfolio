@@ -1,0 +1,553 @@
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 80px 0;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.banner-content,
+.banner-image {
+  position: relative;
+  z-index: 1;
+}
+
+.banner-content h1 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #3b3b3b;
+  line-height: 53px;
+}
+
+.banner-content h1 span {
+  color: #c80808;
+  font-weight: bold;
+  font-size: 46px;
+  font-family: "Poppins", sans-serif;
+}
+
+.banner-content p {
+  margin: 15px 0 30px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.primary-btn1 {
+  display: inline-flex;
+  align-items: center;
+  background: #c80808;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-btn1:hover {
+  background: #a50606;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(200, 8, 8, 0.3);
+}
+
+.primary-btn1 svg {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.primary-btn1:hover svg {
+  transform: translateX(3px);
+}
+/* Banner Slider */
+.banner-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-slider .slick-slide {
+  outline: none;
+  transition: transform 0.7s ease-in-out;
+}
+
+.banner-slider .carousal {
+  text-align: left;
+  color: #fff;
+  padding: 40px 0;
+}
+
+/* ===============================
+   Dots (Scoped to Banner Only)
+   =============================== */
+
+.banner-slider .slick-dots {
+  position: relative;
+  top: auto;
+  bottom: 15px;
+  left: 6px;
+  right: 0;
+  display: flex !important;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 5;
+}
+
+.banner-slider .slick-dots li {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #cdc6c6;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0; /* Hides any number text */
+  line-height: 0;
+  color: transparent; /* Ensures no visible text */
+  transition: all 0.3s ease;
+}
+
+.banner-slider .slick-dots li button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #cdc6c6;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0; /* Hides any number text */
+  line-height: 0;
+  color: transparent; /* Ensures no visible text */
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 2px #cdc6c6;
+}
+
+/* Hide the default Slick icon-based dot system */
+.banner-slider .slick-dots li button:before {
+  content: "";
+  display: none;
+}
+
+.banner-slider .slick-dots li.slick-active button {
+  background: #c80808;
+  transform: scale(1);
+  box-shadow: 0 0 0 4px #ffd5da;
+}
+.banner-slider .slick-dots li.slick-active {
+  background: #c80808;
+  transform: scale(1);
+}
+
+/* Smooth fade animation */
+.banner-slider .slick-slide {
+  transition: opacity 1s ease-in-out;
+}
+.banner-slider.slick-slider:before,
+.banner-slider.slick-slider:after {
+  background: transparent;
+}
+
+.banner-image {
+  position: relative;
+  text-align: center;
+  padding: 50px;
+  /*             background: #f5f5f5; */
+  background-size: contain;
+  transition: transform 0.2s ease-in-out;
+  border-radius: 50px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .banner-image:hover {
+  animation: bg-shake 0.5s;
+}
+
+@keyframes bg-shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-5px, 3px);
+  }
+  40% {
+    transform: translate(5px, -3px);
+  }
+  60% {
+    transform: translate(-3px, 2px);
+  }
+  80% {
+    transform: translate(3px, -2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+} */
+
+.banner-image img {
+  max-width: 350px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Floating Cards Container */
+.banner-cards-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Banner Cards - Grid positioned */
+.banner-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  transition: opacity 0.6s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*     background: #c808080d !important; */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Remove individual positioning classes since we're using grid */
+.float-card-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+.float-card-2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+.float-card-3 {
+  grid-column: 3;
+  grid-row: 1;
+}
+.float-card-4 {
+  grid-column: 1;
+  grid-row: 2;
+}
+.float-card-5 {
+  grid-column: 2;
+  grid-row: 2;
+}
+.float-card-6 {
+  grid-column: 3;
+  grid-row: 2;
+}
+.float-card-7 {
+  grid-column: 1;
+  grid-row: 3;
+}
+.float-card-8 {
+  grid-column: 2;
+  grid-row: 3;
+}
+.float-card-9 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+/* Floating Cards */
+.floating-card {
+  position: absolute;
+  /*     background: #fff; */
+  padding: 10px 15px;
+  border-radius: 0px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  transition: all 0.6s ease;
+  z-index: 3;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.floating-card i {
+  color: #c80808;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Active cards visible */
+.banner-card.active {
+  opacity: 1;
+}
+
+.floating-card.active {
+  opacity: 1;
+  transform: translateY(0) scale(0.9);
+}
+
+/* Card background colors */
+/* .card-1 { background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); }
+.card-2 { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); }
+.card-3 { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
+.card-4 { background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); }
+.card-5 { background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%); }
+.card-6 { background: linear-gradient(135deg, #a6c0fe 0%, #f68084 100%); }
+.card-7 { background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%); }
+.card-8 { background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); } */
+
+@media (max-width: 992px) {
+  .banner-content h1 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .banner-content h1 span {
+    font-size: 36px;
+  }
+
+  .floating-card {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .floating-card i {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 40px 0;
+  }
+
+  .banner-content h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .banner-content h1 span {
+    font-size: 30px;
+  }
+
+  .banner-cards-container {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .floating-card {
+    font-size: 11px;
+    padding: 6px 10px;
+    width: 95%;
+    height: 85%;
+  }
+
+  .floating-card i {
+    font-size: 18px;
+  }
+}
+
+/* Zoom In Animation */
+.floating-card.zoom-in.active {
+  opacity: 1;
+  transform: translateY(0) scale(0.9);
+  animation: zoomIn 0.6s ease-out;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+}
+
+/* Zoom Out Animation (appears large then settles) */
+.floating-card.zoom-out.active {
+  opacity: 1;
+  transform: translateY(0) scale(0.9);
+  animation: zoomOut 0.6s ease-out;
+}
+
+@keyframes zoomOut {
+  0% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+  70% {
+    opacity: 0.8;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+}
+
+/* Fade In Animation */
+.floating-card.fade-in.active {
+  opacity: 1;
+  transform: translateY(0) scale(0.9);
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide In Animation */
+.floating-card.slide-in.active {
+  opacity: 1;
+  transform: translateY(0) scale(0.9);
+  animation: slideIn 0.7s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Bounce Animation */
+.floating-card.bounce.active {
+  opacity: 1;
+  transform: translateY(0) scale(0.9);
+  animation: bounceIn 0.8s ease-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(100px);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1) translateY(-10px);
+  }
+  70% {
+    transform: scale(0.8) translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0.9) translateY(0);
+  }
+}
+
+/* Flip Animation */
+.floating-card.flip.active {
+  opacity: 1;
+  transform: translateY(0) scale(0.9);
+  animation: flipIn 0.8s ease-out;
+}
+
+@keyframes flipIn {
+  0% {
+    opacity: 0;
+    transform: perspective(400px) rotateY(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(400px) rotateY(0deg);
+  }
+}
+
+/* Pulse Animation on hover */
+.floating-card:hover {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Exit animations */
+.floating-card.zoom-in:not(.active) {
+  animation: zoomOutExit 0.4s ease-in;
+}
+
+@keyframes zoomOutExit {
+  0% {
+    opacity: 1;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+.floating-card.fade-in:not(.active) {
+  animation: fadeOutExit 0.4s ease-in;
+}
+
+@keyframes fadeOutExit {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
