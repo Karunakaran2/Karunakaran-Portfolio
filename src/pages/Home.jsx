@@ -11,6 +11,7 @@ import Contact from "./Contact";
 import Section from "../components/Section";
 import Banner from "./Banner";
 import BannerSection from "../components/BannerSection";
+import Experience from "./Experience";
 
 export default function Home() {
   return (
@@ -19,16 +20,39 @@ export default function Home() {
       <BannerSection id="home">
         <Banner />
       </BannerSection>
-      <Section id="about" className="container">
+      <Section
+        id="about"
+        className="container"
+        title="Who I Am"
+        subtitle="A Frontend developer crafting clean and creative digital experiences."
+      >
         <About />
       </Section>
-      <Section id="skills" className="container">
+      <Section
+        id="skills"
+        className="container"
+        title="What I Do Best"
+        subtitle="Tools and tech that shape my front-end craft."
+      >
         <Skills />
       </Section>
-      <Section id="projects" className="container">
+      <Section
+        id="experience"
+        className="container"
+        title="My Journey"
+        subtitle="Real-world projects that sharpened my skills."
+      >
+        <Experience />
+      </Section>
+      <Section
+        id="projects"
+        className="container"
+        title="Work That Speaks"
+        subtitle="A collection of ideas turned into impactful solutions."
+      >
         <Projects />
       </Section>
-      <Section id="contact" className="container">
+      <Section id="contact" className="container" title="" subtitle="">
         <Contact />
       </Section>
     </div>

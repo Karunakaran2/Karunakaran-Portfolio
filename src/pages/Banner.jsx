@@ -85,7 +85,8 @@ export default function Banner() {
         <div className="row align-items-center">
           {/* LEFT SIDE: Banner Text */}
           <div className="col-md-6 banner-content">
-            <Slider {...sliderSettings} className="banner-slider">
+            {/* {...sliderSettings}  */}
+            <Slider className="banner-slider">
               <div className="carousal">
                 <h1>
                   Karunakaran S
@@ -96,20 +97,9 @@ export default function Banner() {
                   Passionate about crafting scalable, interactive, and
                   user-friendly interfaces using modern web technologies.
                 </p>
-                <a className="primary-btn1 btn-hover" href="#skills">
+                <a className="modern-btn" href="#skills">
                   View Skills{" "}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"
-                    ></path>
-                  </svg>
+                   
                 </a>
               </div>
             </Slider>

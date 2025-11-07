@@ -13,10 +13,9 @@ const Header = styled.header`
   width: 100%;
   z-index: 1000;
   backdrop-filter: blur(12px);
-  background: ${({ $dark }) =>
-    $dark ? "rgba(18,18,18,0.75)" : "rgba(255,255,255,0.75)"};
-  box-shadow: ${({ $scrolled }) =>
-    $scrolled ? "0 5px 20px rgba(0,0,0,0.1)" : "none"};
+  background: ${({ theme }) =>
+    theme.mode === "dark" ? "rgba(15,23,42,0.85)" : "rgba(255,255,255,0.75)"};
+  box-shadow: ${({ theme }) => theme.shadows.sm};
   transition: all 0.3s ease;
 `;
 
@@ -28,12 +27,11 @@ const NavContainer = styled(Container)`
 `;
 
 const Logo = styled.a`
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  text-decoration: none;
-  color: ${({ $dark }) => ($dark ? "#fff" : "#111")};
+  color: ${({ theme }) => theme.colors.text};
   span {
-    color: #007bff;
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;
 
@@ -48,16 +46,14 @@ const NavLinks = styled.nav`
 `;
 
 const StyledNavLink = styled(HashLink)`
-  color: ${({ $dark }) => ($dark ? "#ddd" : "#333")};
+  color: ${({ theme }) => theme.colors.subtext};
   text-decoration: none;
   font-weight: 500;
-  transition: 0.2s;
   &.active {
-    color: #007bff;
-    font-weight: 600;
+    color: ${({ theme }) => theme.colors.primary};
   }
   &:hover {
-    color: #007bff;
+    color: ${({ theme }) => theme.colors.secondary};
   }
 `;
 
@@ -69,7 +65,14 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "skills", "projects", "contact"];
+      const sections = [
+        "home",
+        "about",
+        "skills",
+        "experience",
+        "projects",
+        "contact",
+      ];
       let current = "home";
       sections.forEach((id) => {
         const element = document.getElementById(id);
@@ -94,17 +97,19 @@ export default function Navbar() {
         </Logo>
 
         <NavLinks>
-          {["home", "about", "skills", "projects", "contact"].map((section) => (
-            <StyledNavLink
-              key={section}
-              smooth
-              to={`#${section}`}
-              className={activeSection === section ? "active" : ""}
-              $dark={isDark}
-            >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
-            </StyledNavLink>
-          ))}
+          {["home", "about", "skills", "experience", "projects", "contact"].map(
+            (section) => (
+              <StyledNavLink
+                key={section}
+                smooth
+                to={`#${section}`}
+                className={activeSection === section ? "active" : ""}
+                $dark={isDark}
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </StyledNavLink>
+            )
+          )}
         </NavLinks>
         <ThemeToggle />
       </NavContainer>

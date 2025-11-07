@@ -1,3 +1,19 @@
+:root {
+  --color-primary: #007bff;
+  --color-primary-hover: #a50606;
+  --color-text: #3b3b3b;
+  --color-subtext: #555;
+  --button-primary: #007bff;
+}
+
+[data-theme="dark"] {
+  --color-primary: #c80808;
+  --color-primary-hover: #e60000;
+  --color-text: #fff;
+  --color-subtext: #e0e0e0;
+  --button-primary: #c80808;
+}
+
 .banner {
   position: relative;
   display: flex;
@@ -22,29 +38,29 @@
 }
 
 .banner-content h1 {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: 600;
-  color: #3b3b3b;
+  color: var(--color-text);
   line-height: 53px;
 }
 
 .banner-content h1 span {
-  color: #c80808;
+  color: var(--color-primary);
   font-weight: bold;
-  font-size: 46px;
+  font-size: 40px;
   font-family: "Poppins", sans-serif;
 }
 
 .banner-content p {
   margin: 15px 0 30px;
   font-size: 1.1rem;
-  color: #555;
+  color: var(--color-subtext);
 }
 
 .primary-btn1 {
   display: inline-flex;
   align-items: center;
-  background: #c80808;
+  background: var(--button-primary);
   color: white;
   padding: 12px 24px;
   border-radius: 5px;
@@ -65,6 +81,7 @@
 .primary-btn1 svg {
   margin-left: 8px;
   transition: transform 0.3s ease;
+  fill: #fff;
 }
 
 .primary-btn1:hover svg {
@@ -88,81 +105,6 @@
   padding: 40px 0;
 }
 
-/* ===============================
-   Dots (Scoped to Banner Only)
-   =============================== */
-
-.banner-slider .slick-dots {
-  position: relative;
-  top: auto;
-  bottom: 15px;
-  left: 6px;
-  right: 0;
-  display: flex !important;
-  justify-content: start;
-  align-items: center;
-  gap: 12px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  z-index: 5;
-}
-
-.banner-slider .slick-dots li {
-  width: 10px;
-  height: 10px;
-  display: inline-block;
-  border-radius: 50%;
-  background: #cdc6c6;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  font-size: 0; /* Hides any number text */
-  line-height: 0;
-  color: transparent; /* Ensures no visible text */
-  transition: all 0.3s ease;
-}
-
-.banner-slider .slick-dots li button {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #cdc6c6;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  font-size: 0; /* Hides any number text */
-  line-height: 0;
-  color: transparent; /* Ensures no visible text */
-  transition: all 0.3s ease;
-  box-shadow: 0 0 0 2px #cdc6c6;
-}
-
-/* Hide the default Slick icon-based dot system */
-.banner-slider .slick-dots li button:before {
-  content: "";
-  display: none;
-}
-
-.banner-slider .slick-dots li.slick-active button {
-  background: #c80808;
-  transform: scale(1);
-  box-shadow: 0 0 0 4px #ffd5da;
-}
-.banner-slider .slick-dots li.slick-active {
-  background: #c80808;
-  transform: scale(1);
-}
-
-/* Smooth fade animation */
-.banner-slider .slick-slide {
-  transition: opacity 1s ease-in-out;
-}
-.banner-slider.slick-slider:before,
-.banner-slider.slick-slider:after {
-  background: transparent;
-}
-
 .banner-image {
   position: relative;
   text-align: center;
@@ -176,31 +118,6 @@
   justify-content: center;
   align-items: center;
 }
-
-/* .banner-image:hover {
-  animation: bg-shake 0.5s;
-}
-
-@keyframes bg-shake {
-  0% {
-    transform: translate(0, 0);
-  }
-  20% {
-    transform: translate(-5px, 3px);
-  }
-  40% {
-    transform: translate(5px, -3px);
-  }
-  60% {
-    transform: translate(-3px, 2px);
-  }
-  80% {
-    transform: translate(3px, -2px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-} */
 
 .banner-image img {
   max-width: 350px;
@@ -316,16 +233,6 @@
   opacity: 1;
   transform: translateY(0) scale(0.9);
 }
-
-/* Card background colors */
-/* .card-1 { background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%); }
-.card-2 { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); }
-.card-3 { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
-.card-4 { background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); }
-.card-5 { background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%); }
-.card-6 { background: linear-gradient(135deg, #a6c0fe 0%, #f68084 100%); }
-.card-7 { background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%); }
-.card-8 { background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%); } */
 
 @media (max-width: 992px) {
   .banner-content h1 {
@@ -550,4 +457,180 @@
     opacity: 0;
     transform: translateY(-30px);
   }
+}
+
+.modern-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  background: var(--color-primary);
+  /* box-shadow: 0 8px 20px rgba(255, 81, 47, 0.3); */
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.modern-btn:hover {
+  transform: translateY(-3px);
+  /* box-shadow: 0 12px 24px rgba(255, 81, 47, 0.5); */
+  color: #fff;
+}
+
+.modern-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-25deg);
+  transition: left 0.7s ease;
+}
+
+.modern-btn:hover::before {
+  left: 125%;
+}
+
+.glow-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 26px;
+  font-weight: 600;
+  color: var(--color-text);
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.glow-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-primary);
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.glow-btn:hover::after {
+  transform: translateY(0);
+}
+
+.glow-btn:hover {
+  color: white;
+  box-shadow: 0 0 20px var(--color-primary);
+}
+
+.underline-btn {
+  position: relative;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: none;
+  border: none;
+  padding: 6px 0;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.underline-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.underline-btn:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   Dots (Scoped to Banner Only)
+   =============================== */
+
+.banner-slider .slick-dots {
+ position: relative;
+  top: auto;
+  bottom: 15px;
+  right: 6px;
+  left: auto;
+  display: flex !important;
+  justify-content: end;
+  align-items: center;
+  gap: 5px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 5;
+}
+
+.banner-slider .slick-dots li {
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #cdc6c6;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0; /* Hides any number text */
+  line-height: 0;
+  color: transparent; /* Ensures no visible text */
+  transition: all 0.3s ease;
+}
+
+.banner-slider .slick-dots li button {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #cdc6c6;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0; /* Hides any number text */
+  line-height: 0;
+  color: transparent; /* Ensures no visible text */
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 2px #cdc6c6;
+}
+
+/* Hide the default Slick icon-based dot system */
+.banner-slider .slick-dots li button:before {
+  content: "";
+  display: none;
+}
+
+.banner-slider .slick-dots li.slick-active button {
+  background: var(--color-primary);
+  transform: scale(1);
+  box-shadow: 0 0 0 4px #ffd5da;
+}
+.banner-slider .slick-dots li.slick-active {
+  background: var(--color-primary);
+  transform: scale(1);
+}
+
+/* Smooth fade animation */
+.banner-slider .slick-slide {
+  transition: opacity 1s ease-in-out;
+}
+.banner-slider.slick-slider:before,
+.banner-slider.slick-slider:after {
+  background: transparent;
 }

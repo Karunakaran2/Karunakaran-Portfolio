@@ -1,0 +1,42 @@
+export const experiences = [
+  {
+    company: "Kran Consulting Pvt. Ltd",
+    role: "Associate Software Engineer",
+    type: "Full-time",
+    duration: "Dec 2022 – Present · 3 yrs",
+    location: "Trivandrum, Kerala, India",
+    details: [
+      "Performance Optimization: Improved Google Lighthouse Score from 65 to 90 by optimizing React components and API calls.",
+      "API Integration & State Management: Integrated 20+ REST APIs using Axios and Context API with custom hooks.",
+      "Responsive UI: Built and maintained a custom design system using HTML5, CSS3, and Bootstrap.",
+      "Code Quality: Conducted code reviews and maintained zero critical production defects.",
+    ],
+    skills: ["Tailwind CSS", "React", "JavaScript", "Java", "REST API", "Git"],
+  },
+  {
+    company: "Winzone Softech",
+    role: "Web Development Intern",
+    type: "Internship",
+    duration: "May 2022 – Oct 2022 · 6 mos",
+    location: "Karaikkudi, Tamil Nadu, India",
+    details: [
+      "Developed responsive web pages using HTML, CSS, and Bootstrap.",
+      "Worked on live projects under senior developer mentorship.",
+      "Gained exposure to hosting and debugging client websites.",
+    ],
+    skills: ["HTML", "CSS", "Bootstrap", "Git"],
+  },
+  {
+    company: "Digital Nirvana, Inc.",
+    role: "Associate Financial Reporter / Trainee Reporter",
+    type: "Full-time",
+    duration: "Mar 2021 – May 2022 · 1 yr 6 mos",
+    location: "Coimbatore, Tamil Nadu, India",
+    details: [
+      "Worked as a Trainee Reporter before promotion to Associate Reporter.",
+      "Compiled financial reports and summaries for international clients.",
+      "Maintained data accuracy and consistency under tight deadlines.",
+    ],
+    skills: ["MS Excel", "Data Reporting", "Communication"],
+  },
+];

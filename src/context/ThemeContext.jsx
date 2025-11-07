@@ -1,4 +1,7 @@
 import React, { createContext, useReducer, useContext, useEffect } from "react";
+import { GlobalStyle } from "../theme/globalStyle";
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "../theme/theme";
 
 const ThemeContext = createContext();
 
@@ -22,8 +25,9 @@ const initialState = () => {
   return { darkMode: false };
 };
 
-export const ThemeProvider = ({ children }) => {
+export const ThemeContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(themeReducer, undefined, initialState);
+  const theme = state.darkMode ? darkTheme : lightTheme;
 
   useEffect(() => {
     try {
@@ -33,7 +37,10 @@ export const ThemeProvider = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={{ state, dispatch }}>
-      {children}
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        {children}
+      </ThemeProvider>
     </ThemeContext.Provider>
   );
 };

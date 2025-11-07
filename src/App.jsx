@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ThemeProvider as MuiThemeProvider, CssBaseline } from "@mui/material";
 // import { ThemeProvider } from "./context/ThemeContext";
-import { getAppTheme } from "./theme/theme";
 import { useTheme } from "./context/ThemeContext";
 import useScrollToTop from "./hooks/useScrollToTop";
 import useToggleBodyClass from "./hooks/useToggleBodyClass";
 import ThemeToggle from "./components/ThemeToggle";
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "./theme/theme";
 
 import "./App.css";
 import { Route, Router, Routes } from "react-router-dom";
@@ -20,13 +21,19 @@ import Footer from "./components/Footer";
 
 function App() {
   const { state } = useTheme();
+  const isDark = state.darkMode;
+  useEffect(() => {
+    document.documentElement.setAttribute(
+      "data-theme",
+      isDark ? "dark" : "light"
+    );
+  }, [isDark]);
+
   // useScrollToTop();
   // useToggleBodyClass(state.darkMode);
-  const muiTheme = getAppTheme(state.darkMode);
   return (
     <>
-      <MuiThemeProvider theme={muiTheme}>
-        <CssBaseline />
+      <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -36,8 +43,7 @@ function App() {
           <Route path="/contact" element={<Contact />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
-      </MuiThemeProvider>
+      </ThemeProvider>
     </>
   );
 }
