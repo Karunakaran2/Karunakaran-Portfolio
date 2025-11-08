@@ -104,9 +104,16 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="text-center text-sm text-gray-500 mt-10 pb-10">
-        © {new Date().getFullYear()} Karunakaran S — Built with ❤️ using React &
-        Tailwind CSS.
+      <div className="d-flex flex-column align-items-center pb-10">
+        <div className="text-center text-sm text-gray-500 mt-10">
+          © {new Date().getFullYear()} Karunakaran S — Built with ❤️ using React
+          & Tailwind CSS.{" "}
+        </div>
+        <img
+          src="https://hits.sh/karunakaran-dev.vercel.app.svg?label=visitors&color=ff4757&style=flat-square"
+          alt="Visitor Count"
+          className="mt-2"
+        />
       </div>
 
       {/* Back to Top Button */}
