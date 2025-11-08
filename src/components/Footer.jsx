@@ -88,16 +88,18 @@ export default function Footer() {
         </div>
         {/* Footer Navigation */}
         <ul className="flex gap-6 text-sm flex-wrap justify-center m-0 p-0">
-          {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
-            <li key={item}>
-              <a
-                href={`#${item.toLowerCase()}`}
-                className="hover-color-text-primary transition"
-              >
-                {item}
-              </a>
-            </li>
-          ))}
+          {["Home", "About", "Skills", "Experience", "Projects", "Contact"].map(
+            (item) => (
+              <li key={item}>
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  className="hover-color-text-primary transition"
+                >
+                  {item}
+                </a>
+              </li>
+            )
+          )}
         </ul>
       </div>
 
