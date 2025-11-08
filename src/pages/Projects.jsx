@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { projects } from "../data/project";
@@ -9,6 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Projects = () => {
   const { state } = useTheme();
+  const navigate = useNavigate();
 
   const sliderSettings = {
     dots: true,
@@ -42,7 +44,7 @@ const Projects = () => {
             >
               {/* Badge */}
               <div
-                className={`absolute top-4 right-4 text-xs font-semibold px-3 py-1 rounded-full shadow-sm ${
+                className={`absolute z-1 top-4 right-4 text-xs font-semibold px-3 py-1 rounded-full shadow-sm ${
                   project.tag === "Ongoing"
                     ? "bg-gradient-to-r from-orange-500 to-pink-500 text-white"
                     : "bg-gradient-to-r from-green-500 to-emerald-400 text-white"
@@ -60,7 +62,7 @@ const Projects = () => {
                       key={i}
                       src={image}
                       alt={project.name}
-                      className="w-full h-full object-cover transition-transform duration-500"
+                      className="w-full h-full object-cover"
                     />
                   ))}
                 </Slider>
@@ -94,10 +96,17 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <button className="inline-flex items-center gap-2 text-sm font-medium text-red-600 hover:text-red-700 transition">
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`inline-flex items-center gap-2 text-sm font-medium color-text-primary hover-color-text-primary transition ${
+                    project.url === "" ? "d-none" : "d-flex"
+                  }`}
+                >
                   View Project
                   <ExternalLink size={16} />
-                </button>
+                </a>
               </div>
             </motion.div>
           ))}

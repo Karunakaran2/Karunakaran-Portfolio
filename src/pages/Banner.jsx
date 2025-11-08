@@ -6,10 +6,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../css/Banner.css";
 import { techCards } from "../data/banner-skills";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Banner() {
   const [visibleCards, setVisibleCards] = useState([]);
   const [hiddenCards, setHiddenCards] = useState([]);
+
+  const { state } = useTheme();
+  const isDark = state.darkMode;
 
   // Load particles
   const particlesInit = async (engine) => {
@@ -32,7 +36,7 @@ export default function Banner() {
       shown[randomVisible] = randomHidden;
 
       setVisibleCards([...shown]);
-    }, 3000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -58,13 +62,13 @@ export default function Banner() {
         options={{
           particles: {
             number: { value: 30, density: { enable: true, value_area: 800 } },
-            color: { value: "#c80808" },
+            color: { value: isDark ? "#007bff" : "#c80808" },
             opacity: { value: 0.2, random: true },
             size: { value: 3, random: true },
             line_linked: {
               enable: true,
               distance: 150,
-              color: "#c80808",
+              color: isDark ? "#007bff" : "#c80808",
               opacity: 0.2,
               width: 1,
             },
@@ -99,7 +103,6 @@ export default function Banner() {
                 </p>
                 <a className="modern-btn" href="#skills">
                   View Skills{" "}
-                   
                 </a>
               </div>
             </Slider>

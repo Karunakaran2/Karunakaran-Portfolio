@@ -565,7 +565,7 @@
    =============================== */
 
 .banner-slider .slick-dots {
- position: relative;
+  position: relative;
   top: auto;
   bottom: 15px;
   right: 6px;
@@ -573,7 +573,7 @@
   display: flex !important;
   justify-content: end;
   align-items: center;
-  gap: 5px;
+  gap: 0px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -633,4 +633,13 @@
 .banner-slider.slick-slider:before,
 .banner-slider.slick-slider:after {
   background: transparent;
+}
+#name-label {
+  color: var(--color-subtext);
+}
+#email-label {
+  color: var(--color-subtext);
+}
+#message-label {
+  color: var(--color-subtext);
 }

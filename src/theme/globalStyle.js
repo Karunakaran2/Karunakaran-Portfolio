@@ -76,7 +76,7 @@ export const GlobalStyle = createGlobalStyle`
     border-bottom: 1px solid transparent;
     &:hover {
       color: ${({ theme }) => theme.colors.primary};
-      border-bottom: 1px solid ${({ theme }) => theme.colors.secondary};
+      ${'' /* border-bottom: 1px solid ${({ theme }) => theme.colors.secondary}; */}
     }
   }
 
@@ -106,8 +106,22 @@ export const GlobalStyle = createGlobalStyle`
 .bg-button {
    background: ${({ theme }) => theme.colors.primary};
 }
+.bg-button:hover {
+   background: ${({ theme }) => theme.colors.secondary};
+}
 .color-text {
   color: ${({ theme }) => theme.colors.text};
+}
+.color-text-primary {
+  color: ${({ theme }) => theme.colors.primary};
+}
+.color-text-secondary {
+  color: ${({ theme }) => theme.colors.secondary};
+}
+.hover-color-text-primary:hover {
+ color: ${({ theme }) => theme.colors.secondary};
+ ${'' /* background: ${({ theme }) => theme.colors.primary}; */}
+ ${'' /* border: 1px solid ${({ theme }) => theme.colors.primary}; */}
 }
 .modern-btn {
   position: relative;
@@ -155,7 +169,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     padding: 0.6rem 1rem;
     border-radius: 8px;
-    border: 1px solid ${({ theme }) => theme.colors.border};
+    border: 1px solid ${({ theme }) => theme.colors.subtext};
     background: ${({ theme }) => theme.colors.surface};
     color: ${({ theme }) => theme.colors.text};
     font-family: inherit;
@@ -170,7 +184,7 @@ export const GlobalStyle = createGlobalStyle`
   /* ===== LISTS ===== */
   ul {
     margin-left: 1.5rem;
-    list-style: disc;
+    list-style: none;
     color: ${({ theme }) => theme.colors.subtext};
     margin-bottom: 1rem;
   }

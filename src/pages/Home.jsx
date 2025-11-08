@@ -52,7 +52,12 @@ export default function Home() {
       >
         <Projects />
       </Section>
-      <Section id="contact" className="container" title="" subtitle="">
+      <Section
+        id="contact"
+        className="container"
+        title="Contact"
+        subtitle="Got a project or idea in mind? I’d love to collaborate and bring it to life."
+      >
         <Contact />
       </Section>
     </div>

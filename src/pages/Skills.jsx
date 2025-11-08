@@ -7,7 +7,7 @@ export default function Skills() {
   const { state } = useTheme();
   const isDark = state.darkMode;
 
-  const bgColor = isDark ? "hover:bg-gray-800" : "hover:bg-gray-300";
+  const bgColor = isDark ? "hover:bg-gray-800" : "hover:bg-gray-100";
   const textColor = isDark ? "text-gray-300" : "text-gray-800";
 
   const [selected, setSelected] = useState("All");
@@ -40,7 +40,7 @@ export default function Skills() {
       {/* Skills Grid */}
       <motion.div
         layout
-        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-items-center mx-auto"
+        className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center mx-auto"
       >
         <AnimatePresence>
           {filteredSkills.map((skill, index) => (

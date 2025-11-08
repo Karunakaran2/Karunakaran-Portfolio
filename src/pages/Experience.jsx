@@ -26,7 +26,9 @@ const Experience = () => {
                 onClick={() => setActiveIndex(index)}
                 className={`group text-left rounded-xl px-5 py-4 transition-all duration-300 ${
                   activeIndex === index
-                    ? "bg-button from-red-500 to-pink-500 text-white scale-[1.02]"
+                    ? `from-red-500 to-pink-500 text-white scale-[1.02] ${
+                        state.darkMode ? "border bg-gray-900" : "bg-gray-100"
+                      }`
                     : `border border-gray-200 hover:shadow-md ${
                         state.darkMode
                           ? ""
@@ -34,10 +36,18 @@ const Experience = () => {
                       }`
                 }`}
               >
-                <h4 className="text-lg font-semibold color-text">{exp.company}</h4>
+                <h4
+                  className={`text-lg font-semibold color-text ${
+                    activeIndex === index ? "color-text-primary" : ""
+                  }`}
+                >
+                  {exp.company}
+                </h4>
                 <p
                   className={`text-sm mt-1 ${
-                    activeIndex === index ? "text-red-100" : "text-gray-500"
+                    activeIndex === index
+                      ? "color-text-primary"
+                      : "text-gray-500"
                   }`}
                 >
                   {exp.role}
@@ -82,7 +92,7 @@ const Experience = () => {
                 </p>
 
                 <ul
-                  className={`space-y-3 leading-relaxed ${
+                  className={`space-y-3 leading-relaxed m-0 p-0 ${
                     state.darkMode ? "" : "text-gray-700"
                   }`}
                 >

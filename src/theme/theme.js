@@ -137,5 +137,22 @@ export const darkTheme = {
 //           },
 //         },
 //       },
+//       MuiOutlinedInput: {
+//         styleOverrides: {
+//           root: {
+//             background: `linear-gradient(135deg, ${
+//               isDark ? "#FF8C1A" : "#FF7A01"
+//             }, ${isDark ? "#FF9D23" : "#FFB547"})`,
+//             color: isDark ? "#94A3B8" : "#475569",
+//           },
+//         },
+//       },
+//       MuiInputLabel: {
+//         styleOverrides: {
+//           root: {
+//             color: isDark ? "#94A3B8" : "#475569",
+//           },
+//         },
+//       },
 //     },
 //   });

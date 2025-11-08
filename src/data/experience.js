@@ -1,7 +1,7 @@
 export const experiences = [
   {
     company: "Kran Consulting Pvt. Ltd",
-    role: "Associate Software Engineer",
+    role: "Software Engineer",
     type: "Full-time",
     duration: "Dec 2022 – Present · 3 yrs",
     location: "Trivandrum, Kerala, India",
@@ -11,7 +11,21 @@ export const experiences = [
       "Responsive UI: Built and maintained a custom design system using HTML5, CSS3, and Bootstrap.",
       "Code Quality: Conducted code reviews and maintained zero critical production defects.",
     ],
-    skills: ["Tailwind CSS", "React", "JavaScript", "Java", "REST API", "Git"],
+    skills: [
+      "React.Js",
+      "Tailwind CSS",
+      "Material UI",
+      "JavaScript",
+      "Bootstrap",
+      "CSS",
+      "HTML",
+      "Java Spring Boot",
+      "REST API",
+      "Git",
+      "GitHub",
+      "MySQL",
+      "Drupal CMS",
+    ],
   },
   {
     company: "Winzone Softech",
@@ -24,7 +38,7 @@ export const experiences = [
       "Worked on live projects under senior developer mentorship.",
       "Gained exposure to hosting and debugging client websites.",
     ],
-    skills: ["HTML", "CSS", "Bootstrap", "Git"],
+    skills: ["HTML", "CSS", "Bootstrap", "PHP", "MySQL", "Git"],
   },
   {
     company: "Digital Nirvana, Inc.",
