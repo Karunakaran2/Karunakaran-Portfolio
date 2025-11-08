@@ -113,7 +113,7 @@ export default function Footer() {
       {showTopBtn && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-button hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300"
+          className="fixed bottom-6 z-1 right-6 bg-button hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300"
           aria-label="Back to Top"
         >
           ↑
