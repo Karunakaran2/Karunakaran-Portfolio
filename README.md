@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://karunakaran-dev.vercel.app" target="_blank">
-    <img src="./assets/website-preview.png" alt="Karunakaran Portfolio Website" width="85%" style="border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.2);" />
+    <img src="https://github.com/Karunakaran2/Karunakaran-Portfolio/blob/main/public/assets/website-profile-preview.png" alt="Karunakaran Portfolio Website" width="85%" style="border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.2);" />
   </a>
 </p>
 
@@ -29,7 +29,7 @@ I’ve highlighted my **skills, professional experience, and real-world projects
 - 🌙 **Framer Motion** – For smooth animations and transitions  
 - ✉️ **Formspree** – For handling contact form submissions  
 - ⚙️ **Vite** – Lightning-fast build tool  
-- ☁️ **Netlify** – Hosting and CI/CD deployment  
+- ☁️ **Vercel** – Hosting and CI/CD deployment  
 
 ---
 
@@ -43,7 +43,7 @@ I’ve highlighted my **skills, professional experience, and real-world projects
 ### 📸 Preview
 
 <p align="center">
-  <img src="./assets/website-profile-preview.png" alt="Portfolio Website Screenshot" width="90%" style="border-radius:10px; margin-top:10px;" />
+  <img src="https://github.com/Karunakaran2/Karunakaran-Portfolio/blob/main/public/assets/website-preview.png" alt="Portfolio Website Screenshot" width="90%" style="border-radius:10px; margin-top:10px;" />
 </p>
 
 ---
