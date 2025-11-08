@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { Mail } from "lucide-react";
 import Slider from "react-slick";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
@@ -101,9 +103,14 @@ export default function Banner() {
                   Passionate about crafting scalable, interactive, and
                   user-friendly interfaces using modern web technologies.
                 </p>
-                <a className="modern-btn" href="#skills">
-                  View Skills{" "}
-                </a>
+                <motion.a
+                  href="mailto:karunakaran1.dn@gmail.com"
+                  whileHover={{ scale: 1.05 }}
+                  className="w-fit shadow-md modern-btn"
+                >
+                  <Mail size={18} />
+                  <span>Say Hello</span>
+                </motion.a>
               </div>
             </Slider>
           </div>
