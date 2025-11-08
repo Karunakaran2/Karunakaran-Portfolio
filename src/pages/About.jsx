@@ -16,6 +16,15 @@ const Name = styled.span`
 `;
 
 export default function About() {
+  const handleResumeClick = () => {
+    if (window.gtag) {
+      window.gtag("event", "resume_download", {
+        event_category: "engagement",
+        event_label: "Resume PDF",
+      });
+    }
+  };
+
   const { state } = useTheme();
   const isDark = state.darkMode;
 
@@ -113,6 +122,7 @@ export default function About() {
           <motion.a
             href="/resume/Karunakaran_S_Frontend_Engineer.pdf"
             download
+            onClick={handleResumeClick}
             className="w-fit shadow-md modern-btn"
           >
             <FileDown size={18} />
