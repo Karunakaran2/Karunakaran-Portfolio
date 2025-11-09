@@ -1,7 +1,7 @@
 // Project Data
 export const projects = [
   {
-    name: "Galaxy ALMS (Ongoing Development)",
+    name: "ALMS (Ongoing Development)",
     tag: "Ongoing",
     img: [
       "/images/project/galaxy-alms-6 - Edited.png",
@@ -29,31 +29,9 @@ export const projects = [
     description:
       "Full-scale lifecycle management system with 14 modules. Leading front-end with React and collaborating with backend teams for API integration. Focused on reusable components and performance optimization.",
   },
+
   {
-    name: "CPart Website (Ongoing Development)",
-    tag: "Ongoing",
-    img: [
-      "/images/project/C-Part-1 - Edited.png",
-      "/images/project/C-Part-2 - Edited.png",
-      "/images/project/C-Part-3 - Edited.png",
-    ],
-    tech: [
-      "JavaScript",
-      "AJAX",
-      "HTML",
-      "CSS",
-      "Bootstrap",
-      "Java Spring Boot",
-      "MySQL",
-      "SEO",
-      "Responsive UI",
-    ],
-    url: "",
-    description:
-      "Building a scalable, SEO-optimized website using HTML, CSS, Bootstrap, and AJAX. Focused on responsive layouts, accessibility, and server-side integration with Spring Boot.",
-  },
-  {
-    name: "SmartCampus School Project",
+    name: "SmartCampus - School ERP",
     tag: "Completed",
     img: [
       "/images/project/lovedale-smartcampus-1 - Edited.png",
@@ -83,7 +61,7 @@ export const projects = [
       and implementing Spring Security for authentication and access control.`,
   },
   {
-    name: "SEEPZ Project - G-Admin Modules",
+    name: "RISe ERP - G-Admin Modules",
     tag: "Completed",
     img: [
       "/images/project/seepz-1 - Edited.png",
@@ -105,6 +83,29 @@ export const projects = [
     url: "https://rise.seepz.gov.in/seepz/welcome",
     description:
       "Developed all G-admin frontend modules ensuring cohesive, interactive UI with consistent design and smooth AJAX integration.",
+  },
+  {
+    name: "C-Part Website (Ongoing Development)",
+    tag: "Ongoing",
+    img: [
+      "/images/project/C-Part-1 - Edited.png",
+      "/images/project/C-Part-2 - Edited.png",
+      "/images/project/C-Part-3 - Edited.png",
+    ],
+    tech: [
+      "JavaScript",
+      "AJAX",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "Java Spring Boot",
+      "MySQL",
+      "SEO",
+      "Responsive UI",
+    ],
+    url: "",
+    description:
+      "Building a scalable, SEO-optimized website using HTML, CSS, Bootstrap, and AJAX. Focused on responsive layouts, accessibility, and server-side integration with Spring Boot.",
   },
   {
     name: "Kran Consulting Website (v1 & v2)",
