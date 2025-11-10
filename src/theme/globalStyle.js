@@ -1,8 +1,8 @@
-// src/styles/GlobalStyle.js
+
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-  /* ===== RESET ===== */
+
   *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;

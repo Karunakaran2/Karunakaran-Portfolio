@@ -1,4 +1,4 @@
-// src/styles/theme.js
+
 export const lightTheme = {
   mode: "light",
   colors: {
