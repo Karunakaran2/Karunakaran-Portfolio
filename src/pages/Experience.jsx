@@ -15,7 +15,6 @@ const Experience = () => {
       }`}
     >
       <div className="container mx-auto px-6 md:px-12">
-        {/* Header */}
 
         <div className="flex flex-col md:flex-row gap-10">
           {/* Left Side – Company List */}
@@ -56,7 +55,7 @@ const Experience = () => {
             ))}
           </div>
 
-          {/* Right Side – Animated Details */}
+          {/* Right Side – Details */}
           <div className="md:w-2/3 relative">
             <AnimatePresence mode="wait">
               <motion.div

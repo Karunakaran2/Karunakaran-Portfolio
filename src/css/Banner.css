@@ -142,7 +142,7 @@
   transition: transform 0.2s ease-in-out;
 }
 
-/* Banner Cards - Grid positioned */
+/* Banner Cards -  */
 .banner-card {
   position: relative;
   width: 100%;
@@ -156,7 +156,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Remove individual positioning classes since we're using grid */
+/*using grid */
 .float-card-1 {
   grid-column: 1;
   grid-row: 1;
@@ -560,9 +560,9 @@
   width: 100%;
 }
 
-/* ===============================
+/* =======
    Dots (Scoped to Banner Only)
-   =============================== */
+   ========*/
 
 .banner-slider .slick-dots {
   position: relative;
@@ -589,9 +589,9 @@
   border: none;
   padding: 0;
   cursor: pointer;
-  font-size: 0; /* Hides any number text */
+  font-size: 0;
   line-height: 0;
-  color: transparent; /* Ensures no visible text */
+  color: transparent;
   transition: all 0.3s ease;
 }
 
@@ -603,14 +603,13 @@
   border: none;
   padding: 0;
   cursor: pointer;
-  font-size: 0; /* Hides any number text */
+  font-size: 0;
   line-height: 0;
-  color: transparent; /* Ensures no visible text */
+  color: transparent;
   transition: all 0.3s ease;
   box-shadow: 0 0 0 2px #cdc6c6;
 }
 
-/* Hide the default Slick icon-based dot system */
 .banner-slider .slick-dots li button:before {
   content: "";
   display: none;

@@ -18,9 +18,8 @@ export default function Footer() {
   };
   return (
     <footer className="container relative from-gray-950 via-gray-900 to-gray-800 text-gray-300">
-      {/* Divider Line */}
       <div className="border-t border-gray-700 my-8"></div>
-      {/* Social + Nav */}
+
       <div className="flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Social Icons */}
         <div className="flex gap-6 text-gray-400">
