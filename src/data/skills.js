@@ -54,6 +54,10 @@ export const skillsData = {
       name: "Fetch",
       img: "https://img.icons8.com/fluency/96/download-from-cloud.png",
     },
+    {
+      name: "Redux Toolkit",
+      img: "/images/skills/redux-toolkit.png",
+    },
     { name: "JSON", img: "/images/skills/json.png" },
   ],
   "Tools & Dev": [
