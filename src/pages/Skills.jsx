@@ -58,7 +58,7 @@ export default function Skills() {
                 alt={skill.name}
                 className="w-14 h-14 object-contain"
               />
-              <p className="mb-0 font-medium">{skill.name}</p>
+              <p className="mb-0 font-medium text-left">{skill.name}</p>
             </motion.div>
           ))}
         </AnimatePresence>

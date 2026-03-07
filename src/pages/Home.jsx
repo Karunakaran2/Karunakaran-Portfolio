@@ -24,7 +24,7 @@ export default function Home() {
         id="about"
         className="container"
         title="Who I Am"
-        subtitle="A Frontend developer crafting clean and creative digital experiences."
+        subtitle="A Frontend Engineer crafting clean and creative digital experiences."
       >
         <About />
       </Section>

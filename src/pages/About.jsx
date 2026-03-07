@@ -57,9 +57,7 @@ export default function About() {
             <div className="absolute inset-0 bg-gradient-to-t from-[#001925]/80 via-transparent"></div>
             <div className="absolute bottom-5 left-5 text-white">
               <h3 className="text-2xl text-white font-semibold">Karunakaran</h3>
-              <p className="text-sm opacity-80 text-white">
-                Frontend Developer
-              </p>
+              <p className="text-sm opacity-80 text-white">Frontend Engineer</p>
             </div>
           </div>
         </motion.div>
@@ -73,10 +71,11 @@ export default function About() {
             Hey there 👋 I’m <Name className="font-semibold">Karunakaran</Name>,
             a{" "}
             <span className="font-medium text-orange-400">
-              frontend developer
+              frontend Engineer
             </span>{" "}
             passionate about crafting smooth, responsive, and elegant user
-            experiences using <strong>React, Vite, and Tailwind CSS</strong>.
+            experiences using{" "}
+            <strong>React, TypeScript, Drupal and Tailwind CSS</strong>.
             <br />
             <br />I love writing clean, efficient code and building interfaces
             that feel natural and lightning-fast. My focus is on{" "}
@@ -120,13 +119,13 @@ export default function About() {
           </div>
           {/* Contact Button */}
           <motion.a
-            href="/resume/Karunakaran_S_Frontend_Engineer.pdf"
+            href="/resume/Karunakaran_Software_Engineer.pdf"
             download
             onClick={handleResumeClick}
             className="w-fit shadow-md modern-btn"
           >
             <FileDown size={18} />
-            <span>Download Resume</span>
+            <span>View Resume</span>
           </motion.a>
         </div>
       </div>
